@@ -11,4 +11,5 @@ git clone https://github.com/kenzok8/openwrt-packages package/byff
 
 curl -fsSL https://raw.githubusercontent.com/byff/AutoBuild-op/main/build/Lede_source/diy/x86_index.htm > ./package/lean/autocore/files/x86/index.htm
 sed -i "s/2022.02.01/$(TZ=UTC-8 date "+%Y.%m.%d")/g" package/lean/autocore/files/x86/index.htm
+./scripts/feeds update -a
 ./scripts/feeds install -a
