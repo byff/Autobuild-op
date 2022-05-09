@@ -8,7 +8,7 @@ bash gd772.sh
 sed -i 's/02b79d5e2b07b5e64cd28f1fe84395ee11eef95fc49fd923a9ab93022b148be6/skip/g' feeds/packages/utils/containerd/Makefile
 
 git clone https://github.com/kenzok8/openwrt-packages package/byff
-./scripts/feeds install -a
 
 curl -fsSL https://raw.githubusercontent.com/byff/AutoBuild-op/main/build/Lede_source/diy/x86_index.htm > ./package/lean/autocore/files/x86/index.htm
 sed -i "s/2022.02.01/$(TZ=UTC-8 date "+%Y.%m.%d")/g" package/lean/autocore/files/x86/index.htm
+./scripts/feeds install -a
