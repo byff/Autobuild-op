@@ -45,7 +45,6 @@ curl -fsSL https://raw.githubusercontent.com/gd0772/patch/main/zzz-default-setti
 curl -fsSL https://raw.githubusercontent.com/gd0772/patch/main/udpxy.lua > ./feeds/luci/applications/luci-app-udpxy/luasrc/controller/udpxy.lua
 rm -rf ./feeds/packages/net/samba4 && svn co https://github.com/sirpdboy/diy/trunk/samba4 ./feeds/packages/net/samba4
 curl -fsSL https://raw.githubusercontent.com/byff/AutoBuild-op/main/build/Lede_source/diy/x86_index.htm > ./package/lean/autocore/files/x86/index.htm
-sed -i "s/2022.05.01/$(TZ=UTC-8 date "+%Y.%m.%d")/g" package/lean/autocore/files/x86/index.htm
 TIME b "系统文件 修改完成"
 echo
 TIME y "添加 gd772 Package"
@@ -199,6 +198,6 @@ chmod -R 755 package/gd772
 echo
 TIME g "更新配置..."
 
-./scripts/feeds update -a
+sed -i "s/2022.05.01/$(TZ=UTC-8 date "+%Y.%m.%d")/g" package/lean/autocore/files/x86/index.htm
 ./scripts/feeds install -a
 TIME g "配置更新完成"
