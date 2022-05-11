@@ -18,7 +18,6 @@ TIME() {
 	 }
       }
 }
-git clone https://github.com/Hyy2001X/AutoBuild-Packages package/AutoBuild-package
 git clone https://github.com/kenzok8/openwrt-packages package/byff
 echo
 TIME r "删除无用主题"
