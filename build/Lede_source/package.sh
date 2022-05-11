@@ -55,16 +55,16 @@ curl -fsSL https://raw.githubusercontent.com/cangzair/Public/main/shadowsocksr.l
 echo
 TIME y "添加 小猫咪"
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/gd772/luci-app-openclash
-echo
-TIME y "添加 Pass wall"
-git clone https://github.com/xiaorouji/openwrt-passwall package/gd772/passwall && git clone -b luci https://github.com/xiaorouji/openwrt-passwall && mv openwrt-passwall/luci-app-passwall package/gd772/passwall && rm -rf openwrt-passwall
-curl -fsSL https://raw.githubusercontent.com/cangzair/Public/main/passwall.lua > ./package/gd772/passwall/luci-app-passwall/luasrc/controller/passwall.lua
+# echo
+# TIME y "添加 Pass wall"
+# git clone https://github.com/xiaorouji/openwrt-passwall package/gd772/passwall && git clone -b luci https://github.com/xiaorouji/openwrt-passwall && mv openwrt-passwall/luci-app-passwall package/gd772/passwall && rm -rf openwrt-passwall
+# curl -fsSL https://raw.githubusercontent.com/cangzair/Public/main/passwall.lua > ./package/gd772/passwall/luci-app-passwall/luasrc/controller/passwall.lua
 echo
 TIME y "添加 Hello World"
 git clone https://github.com/jerrykuku/luci-app-vssr package/gd772/luci-app-vssr
-echo
-TIME y "添加 京东签到"
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus package/gd772/luci-app-jd-dailybonus
+# echo
+# TIME y "添加 京东签到"
+# git clone https://github.com/jerrykuku/luci-app-jd-dailybonus package/gd772/luci-app-jd-dailybonus
 echo
 TIME y "添加 SmartDNS"
 git clone https://github.com/pymumu/luci-app-smartdns.git -b lede ./package/gd772/luci-app-smartdns
@@ -73,23 +73,23 @@ echo
 TIME y "添加 MosDNS"
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns package/gd772/luci-app-mosdns
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns package/gd772/luci-app-mosdns/mosdns
-echo
-TIME y "添加 微信推送"
-git clone https://github.com/tty228/luci-app-serverchan.git ./package/gd772/luci-app-serverchan
+# echo
+# TIME y "添加 微信推送"
+# git clone https://github.com/tty228/luci-app-serverchan.git ./package/gd772/luci-app-serverchan
 echo
 TIME y "汉化 实时监控"
 rm -rf ./feeds/luci/applications/luci-app-netdata && svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata ./feeds/luci/applications/luci-app-netdata
 rm -rf ./feeds/packages/admin/netdata && svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata ./feeds/packages/admin/netdata
-echo
-TIME y "添加 Dockerman"
-rm -rf package/gd772/luci-app-dockerman && svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/gd772/luci-app-dockerman
-echo
-TIME y "添加 IKP去广告"
-git clone https://github.com/project-lede/luci-app-ikoolproxy package/gd772/luci-app-ikoolproxy
-echo
-TIME y "添加 解除网易云音乐"
-git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic package/gd772/luci-app-unblockneteasemusic
-# echo             
+# echo
+# TIME y "添加 Dockerman"
+# rm -rf package/gd772/luci-app-dockerman && svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/gd772/luci-app-dockerman
+# echo
+# TIME y "添加 IKP去广告"
+# git clone https://github.com/project-lede/luci-app-ikoolproxy package/gd772/luci-app-ikoolproxy
+# echo
+# TIME y "添加 解除网易云音乐"
+# git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic package/gd772/luci-app-unblockneteasemusic
+# # echo             
 # TIME b "插件 重命名..."
 # sed -i 's/"管理权"/"改密码"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
 # sed -i 's/msgstr "Web 管理"/msgstr "Web"/g' feeds/luci/applications/luci-app-webadmin/po/zh-cn/webadmin.po
