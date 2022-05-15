@@ -19,6 +19,7 @@ TIME() {
       }
 }
 git clone https://github.com/kenzok8/openwrt-packages package/byff
+git clone https://github.com/kenzok8/small package/byff1 && cp -R package/byff1/* package/byff && rm -fr package/byff1/
 echo
 TIME r "删除无用主题"
 rm -rf ./feeds/freifunk/themes
